@@ -27,7 +27,7 @@ python -c "import torch; print(torch.__version__); print(torch.cuda.is_available
 ## Data
 
 Datasets are read from `kg_data/<dataset>/`. The included dataset directories are
-`FB15k237`, `wn18rr`, `YAGO3-10`, and `tree15`; names are case-sensitive.
+`FB15k237`, `wn18rr`, `YAGO3-10`, and `tree`; names are case-sensitive.
 
 ```text
 kg_data/
