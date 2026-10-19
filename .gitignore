@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+/models/*
+!/models/.gitkeep
+*.log
+*.mdl
+*.npy
+.venv/
+venv/
+.env
+.env.*
+.DS_Store
