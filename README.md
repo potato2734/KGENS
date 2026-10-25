@@ -70,7 +70,7 @@ The positional arguments are:
 ```text
 bash run.sh MODE MODEL DATASET GPU SEED \
   BATCH_SIZE NEGATIVES HIDDEN_DIM GAMMA TEMPERATURE LEARNING_RATE MAX_STEPS EVAL_BATCH_SIZE \
-  SQUARE BETA TAU LAMBDA TAG [EXTRA_ARGS...]
+  S_GAMMA BETA TAU LAMBDA TAG [EXTRA_ARGS...]
 ```
 
 | Argument | Meaning |
@@ -88,7 +88,7 @@ bash run.sh MODE MODEL DATASET GPU SEED \
 | `LEARNING_RATE` | Initial Adam learning rate |
 | `MAX_STEPS` | Maximum number of training steps |
 | `EVAL_BATCH_SIZE` | Validation/test batch size |
-| `SQUARE` | Negative-allocation exponent; zero gives equal allocations |
+| `S_GAMMA` | Negative-allocation exponent; zero gives equal allocations |
 | `BETA` | Negative-count weighting exponent |
 | `TAU` | Noise scale for negative allocation; zero disables this noise |
 | `LAMBDA` | Interpolation between original and distribution-shape adversarial logits |
