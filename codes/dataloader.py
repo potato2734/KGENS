@@ -138,7 +138,7 @@ class TrainDataset(Dataset):
         alloc = 0
 
         ratio = self.count_min / count
-        value = ratio ** self.args.square
+        value = ratio ** self.args.square_gamma
         alloc = int(self.ns_size * value)
 
         return alloc

@@ -320,7 +320,7 @@ class KGEModel(nn.Module):
         uniform_allocation = (
             alloc_min == args.negative_sample_size
             and alloc_max == args.negative_sample_size
-            and 0 == args.square
+            and 0 == args.square_gamma
             and 0 == args.lam
         )
 

@@ -73,7 +73,7 @@ def parse_args(args=None):
     parser.add_argument('--nentity', type=int, default=0, help='DO NOT MANUALLY SET')
     parser.add_argument('--nrelation', type=int, default=0, help='DO NOT MANUALLY SET')
 
-    parser.add_argument('-s', '--square', default=0.5, type=float)
+    parser.add_argument('-sg', '--square_gamma', default=0.5, type=float)
     parser.add_argument('--beta', default=0.0, type=float)
     parser.add_argument('--tau', default=1.0, type=float)
     parser.add_argument('--lam', default=0.0, type=float)
@@ -257,7 +257,7 @@ def main(args):
             nrelation,
             args.negative_sample_size,
             'head-batch',
-            args.square,
+            args.square_gamma,
         )
 
         train_dataloader_head = DataLoader(
@@ -276,7 +276,7 @@ def main(args):
             nrelation,
             args.negative_sample_size,
             'tail-batch',
-            args.square,
+            args.square_gamma,
         )
 
         head_max_count = max([v for v in train_dataset_head.alloc.values()])
@@ -326,7 +326,7 @@ def main(args):
 
     logging.info('Start Training...')
     logging.info('init_step = %d' % init_step)
-    logging.info('square = %f' % args.square)
+    logging.info('square = %f' % args.square_gamma)
     logging.info('sum_ns_loss = %d' % args.sum_ns_loss)
     logging.info('negative_sample_size = %d' % args.negative_sample_size)
     logging.info('batch_size = %d' % args.batch_size)

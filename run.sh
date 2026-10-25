@@ -26,7 +26,7 @@ ALPHA="${10}"
 LEARNING_RATE="${11}"
 MAX_STEPS="${12}"
 TEST_BATCH_SIZE="${13}"
-SQUARE="${14}"
+S_GAMMA="${14}"
 BETA="${15}"
 TAU="${16}"
 LAMBDA="${17}"
@@ -60,7 +60,7 @@ if [ "$MODE" = "train" ]; then
         -lr "$LEARNING_RATE" \
         --max_steps "$MAX_STEPS" \
         --test_batch_size "$TEST_BATCH_SIZE" \
-        -s "$SQUARE" \
+        -sg "$S_GAMMA" \
         --seed $SAVE_ID \
         "${EXTRA_ARGS[@]}" \
         -save "$SAVE" \
