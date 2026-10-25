@@ -27,7 +27,7 @@ python -c "import torch; print(torch.__version__); print(torch.cuda.is_available
 ## Data
 
 Datasets are read from `kg_data/<dataset>/`. The included dataset directories are
-`FB15k237`, `wn18rr`, `YAGO3-10`, and `tree`; names are case-sensitive.
+`FB15k237`, `wn18rr`, and `YAGO3-10`; names are case-sensitive.
 
 ```text
 kg_data/
@@ -48,9 +48,7 @@ All files are tab-separated, with no header:
 | `train.txt`, `valid.txt`, `test.txt` | Head entity name, relation name, tail entity name |
 
 Entity and relation IDs must be contiguous and start at zero. Every name in a
-triple must occur in the corresponding dictionary. Dataset paths containing
-`tree` also require `false_negatives.txt`, using the same triple format. These
-triples are used for an additional filtered test evaluation.
+triple must occur in the corresponding dictionary.
 
 ## Train a model
 

@@ -220,9 +220,6 @@ def main(args):
     logging.info('#valid: %d' % len(valid_triples))
     test_triples = read_triple(os.path.join(args.data_path, 'test.txt'), entity2id, relation2id)
     logging.info('#test: %d' % len(test_triples))
-    if 'tree' in args.data_path:
-        fn_triples = read_triple(os.path.join(args.data_path, 'false_negatives.txt'), entity2id, relation2id)
-        logging.info('#false negatives: %d' % len(fn_triples))
 
     
 
@@ -394,10 +391,6 @@ def main(args):
                 logging.info('Evaluating on Test Dataset...')
                 metrics = kge_model.test_step(kge_model, test_triples, all_true_triples, args,)
                 log_metrics('Test', step, metrics)
-                if 'tree' in args.data_path:
-                    logging.info('Evaluating on Full Test Dataset...')
-                    metrics = kge_model.test_step(kge_model, test_triples, all_true_triples + fn_triples, args,)
-                    log_metrics('Full Test', step, metrics)
 
                 log_cuda_memory("AFTER EVAL")
                 gc.collect()
@@ -414,10 +407,6 @@ def main(args):
         logging.info('Evaluating on Test Dataset...')
         metrics = kge_model.test_step(kge_model, test_triples, all_true_triples, args,)
         log_metrics('Test', step, metrics)
-        if 'tree' in args.data_path:
-            logging.info('Evaluating on Full Test Dataset...')
-            metrics = kge_model.test_step(kge_model, test_triples, all_true_triples + fn_triples, args,)
-            log_metrics('Full Test', step, metrics)
 
     if args.evaluate_train:
         logging.info('Evaluating on Training Dataset...')
