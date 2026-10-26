@@ -22,6 +22,6 @@ bash run.sh train ComplEx YAGO3-10 0 0 1024 512 1000 200.0 0.0 0.0001 100000 4 0
 bash run.sh train DistMult FB15k237 0 0 1024 256 2000 200.0 1.0 0.0008 100000 16 0.0 0.0 0.0 0.8 "[!c1]" -r 0.00001 --ignore_scoring_margin
 bash run.sh train DistMult FB15k237 0 0 1024 256 1000 200.0 0.0 0.0007 100000 16 0.3 1.0 0.0 0.0 "[!c2]" -r 0.0000009 --ignore_scoring_margin
 bash run.sh train DistMult wn18rr 0 0 512 32 1000 200.0 0.5 0.0014 100000 8 0.0 0.0 0.0 0.1 "[!c1]" -r 0.000003 --ignore_scoring_margin
-bash run.sh train DistMult wn18rr 0 0 512 32 1000 200.0 2.0 0.0014 100000 8 1.0 1.0 0.0 0.0 "[!c2]" -r 0.000003 --ignore_scoring_margin
+bash run.sh train DistMult wn18rr 0 0 512 32 1000 200.0 0.0 0.0014 100000 8 1.0 1.0 0.0 0.0 "[!c2]" -r 0.000003 --ignore_scoring_margin
 bash run.sh train DistMult YAGO3-10 0 0 1024 256 1000 400.0 4.0 0.0003 100000 4 0.0 0.0 0.0 1.0 "[!c1]" -r 0.000001 --ignore_scoring_margin
 bash run.sh train DistMult YAGO3-10 0 0 512 256 500 400.0 0.0 0.0004 100000 4 0.5 1.0 0.0 0.0 "[!c2]" -r 0.0 --ignore_scoring_margin
